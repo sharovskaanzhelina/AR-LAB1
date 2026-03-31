@@ -151,31 +151,31 @@
 
                 // Масив назв файлів .patt. Масив заповнюється в порядку додавання маркерів
                 // якщо замість .patt було додано баркод, на його місце в масив додається порожній рядок
-                const patternNames = ["data/pattern-125.patt", "", "", "", "", ""];
+                const patternNames = ["data/pattern-125.patt", "", ""];
                 // Масив баркодів, заповнюється одночасно з масивом патернів
                 // якщо замість баркоду був доданий .patt, на його місце масив додається -1
-                const patternBarcode = [-1 ,2 ,3 ,4 ,5 ,6];
+                const patternBarcode = [-1 ,2 ,3];
                 // Масив типів контенту кожного маркера, заповнюється значеннями: зображення, модель, відео
-                const modes = ["image" ,"image" ,"image" ,"image" ,"image" ,"image"];
+                const modes = ["image" ,"image" ,"image"];
                 // Масив файлів моделей, якщо немає моделі буде додано порожній рядок
-                const modelFiles = ["" ,"" ,"" ,"" ,"" ,""];
+                const modelFiles = ["" ,"" ,""];
                 // Масив файлів зображень, якщо немає зображення буде додано також порожній рядок
-                const imageFiles = ["photo1.jpg" ,"ljc-tabulator-700.jpg" ,"hh.jpg" ,"" ,"" ,""];
+                const imageFiles = ["photo1.jpg" ,"ljc-tabulator-700.jpg" ,"hh.jpg"];
                 // Масив файлів відео, якщо немає відео буде ще один порожній рядок
-                const videoFiles = ["" ,"" ,"" ,"" ,"" ,""];
+                const videoFiles = ["" ,"" ,""];
                 // Масив файлів аудіо, якщо немає аудіо буде так само порожній рядок
-                const audioFiles = ["Лабораторну роботу в.mp3" ,"Електромеханічний та.mp3" ,"Винахідник цього при.mp3" ,"" ,"" ,""];
+                const audioFiles = ["Лабораторну роботу в.mp3" ,"Електромеханічний та.mp3" ,"Винахідник цього при.mp3"];
                 // Масив опцій повтору аудіо та відео контенту, по дефолту для всіх буде false
-                const repeatOptions = ["false" ,"false" ,"false" ,"false" ,"false" ,"false"];
+                const repeatOptions = ["false" ,"false" ,"false"];
   
                 // Створюємо масив для всіх маркерів
                 const markerRoots = [];
-                for (let i = 0; i < 6; i++) {
+                for (let i = 0; i < 3; i++) {
                     markerRoots[i] = new THREE.Group();
                 }
   
                 // Проходимо по кожному маркеру з масиву і додаємо його в головний контейнер
-                for (let i = 0; i < 6; i++) {
+                for (let i = 0; i < 3; i++) {
                     mainContainer.add(markerRoots[i]);
 
                     // Якщо поточний маркер – це баркод, створюємо AR контролер під баркод
